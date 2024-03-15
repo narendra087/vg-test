@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import Head from "next/head";
+import Link from "next/link";
 
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -17,7 +18,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Lock } from "lucide-react";
 import { PasswordInput } from "@/components/ui/password-input";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -64,8 +64,8 @@ export default function Home() {
           </div>
         </div>
 
-        <section className="max-w-md w-full">
-          <h1 className="text-5xl font-bold">Daftarkan Akun</h1>
+        <section className="max-w-lg w-full">
+          <h1 className="text-[64px] tracking-tight font-bold leading-none">Daftarkan Akun</h1>
           <p className="mt-5">Daftar akun anda dengan mengisi form dibawah</p>
 
           <div className="mt-10">
@@ -151,7 +151,7 @@ export default function Home() {
                 </Button>
               </form>
               <p className="text-center mt-10">
-                Sudah punya akun? LogIn Sekarang
+                Sudah punya akun? <Link className="font-bold" href={'/login'}>LogIn Sekarang</Link>
               </p>
             </Form>
           </div>
